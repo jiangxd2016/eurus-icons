@@ -2,8 +2,8 @@
   "name": "eurus-icons-monorepo",
   "type": "module",
   "version": "0.0.8",
-  "packageManager": "pnpm@7.2.1",
   "private": true,
+  "packageManager": "pnpm@7.2.1",
   "author": "jiangxd <jiangxd2016@gmail.com>",
   "license": "MIT",
   "scripts": {

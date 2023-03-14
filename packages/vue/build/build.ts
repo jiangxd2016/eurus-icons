@@ -1,13 +1,13 @@
-import path from 'node:path'
-import consola from 'consola'
-import chalk from 'chalk'
-import { build } from 'esbuild'
-import GlobalsPlugin from 'esbuild-plugin-globals'
-import vue from 'unplugin-vue/esbuild'
-import { emptyDir } from 'fs-extra'
-import { version } from '../package.json'
-import { pathOutput, pathSrc } from './paths'
-import type { BuildOptions, Format } from 'esbuild'
+import path from 'node:path';
+import consola from 'consola';
+import chalk from 'chalk';
+import { build } from 'esbuild';
+import GlobalsPlugin from 'esbuild-plugin-globals';
+import vue from 'unplugin-vue/esbuild';
+import { emptyDir } from 'fs-extra';
+import type { BuildOptions, Format } from 'esbuild';
+import { version } from '../package.json';
+import { pathOutput, pathSrc } from './paths';
 
 const buildBundle = () => {
   const getBuildOptions = (format: Format) => {
@@ -31,20 +31,20 @@ const buildBundle = () => {
         js: `/*! Eurus UI Icons Vue v${version} */\n`,
       },
       outdir: pathOutput,
-    }
+    };
     if (format === 'iife') {
       options.plugins!.push(
         GlobalsPlugin({
           vue: 'Vue',
         })
-      )
-      options.globalName = 'EurusIconsVue'
+      );
+      options.globalName = 'EurusIconsVue';
     } else {
-      options.external = ['vue']
+      options.external = ['vue'];
     }
 
-    return options
-  }
+    return options;
+  };
   const doBuild = async (minify: boolean) => {
     await Promise.all([
       build({
@@ -63,13 +63,13 @@ const buildBundle = () => {
         outExtension: { '.js': '.cjs' },
         minify,
       }),
-    ])
-  }
+    ]);
+  };
 
-  return Promise.all([doBuild(true), doBuild(false)])
-}
+  return Promise.all([doBuild(true), doBuild(false)]);
+};
 
-consola.info(chalk.blue('cleaning dist...'))
-await emptyDir(pathOutput)
-consola.info(chalk.blue('building...'))
-await buildBundle()
+consola.info(chalk.blue('cleaning dist...'));
+await emptyDir(pathOutput);
+consola.info(chalk.blue('building...'));
+await buildBundle();

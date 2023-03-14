@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { icons } from 'eurus-icons-vue/global'
+import { icons } from 'eurus-icons-vue/global';
 </script>
 
 <style>
