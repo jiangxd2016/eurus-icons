@@ -13,7 +13,7 @@
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0",
     "format": "prettier --write . && pnpm run -C ./packages/svg optimize",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp -r --commit --tag --push && pnpm publish --access public"
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
     "@estjs/eslint-config": "^0.3.16",
