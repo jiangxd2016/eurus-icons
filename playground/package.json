@@ -1,0 +1,36 @@
+{
+  "name": "playground",
+  "private": true,
+  "packageManager": "pnpm@7.6.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --port 3333 --open",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.13.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@estjs/eslint-config": "^0.3.16",
+    "@iconify-json/carbon": "^1.1.16",
+    "@types/node": "^18.15.3",
+    "@unocss/reset": "^0.50.4",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/test-utils": "^2.3.1",
+    "eslint": "^8.36.0",
+    "jsdom": "^21.1.1",
+    "typescript": "^4.9.5",
+    "unocss": "^0.50.4",
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.1.4",
+    "vite-plugin-pages": "^0.29.0",
+    "vitest": "^0.29.2",
+    "vue-tsc": "^1.2.0"
+  }
+}

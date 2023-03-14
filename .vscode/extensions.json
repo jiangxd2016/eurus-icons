@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "antfu.vite",
+    "antfu.unocss",
+    "johnsoncodehk.volar",
+    "dbaeumer.vscode-eslint"
+  ]
+}
