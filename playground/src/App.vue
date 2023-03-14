@@ -2,7 +2,7 @@
   <component :is="Icon" v-for="(Icon, key) in icons" :key="key" class="icon" />
   <hr />
   <component
-    :is="`ElIcon${key}`"
+    :is="`EuIcon${key}`"
     v-for="key in Object.keys(icons)"
     :key="key"
     class="icon"
