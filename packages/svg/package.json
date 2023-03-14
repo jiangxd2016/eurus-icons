@@ -1,0 +1,28 @@
+{
+  "name": "eurus-icons-svg",
+  "version": "0.0.2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangxd2016/eurus-icons",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/jiangxd2016/eurus-icons/issues"
+  },
+  "keywords": [
+    "icon",
+    "svg",
+    "vue",
+    "eurus-icons"
+  ],
+  "files": [
+    "*.svg"
+  ],
+  "scripts": {
+    "optimize": "svgo -f . -o ."
+  },
+  "devDependencies": {
+    "svgo": "^3.0.2"
+  }
+}

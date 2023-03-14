@@ -1,7 +1,7 @@
 {
   "name": "eurus-icons-monorepo",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "jiangxd <jiangxd2016@gmail.com>",
@@ -43,7 +43,7 @@
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0",
     "format": "prettier --write . && pnpm run -C ./packages/svg optimize",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp --commit --tag --push && pnpm publish --access public"
+    "release": "bumpp -r --commit --tag --push && pnpm publish --access public"
   },
   "devDependencies": {
     "@estjs/eslint-config": "^0.3.16",

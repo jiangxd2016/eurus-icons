@@ -1,7 +1,21 @@
 <template>
-  <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
-    <my-component title="hi" content="nihao" />
-    <router-view />
-    <Footer />
-  </main>
+  <component :is="Icon" v-for="(Icon, key) in icons" :key="key" class="icon" />
+  <hr />
+  <component
+    :is="`ElIcon${key}`"
+    v-for="key in Object.keys(icons)"
+    :key="key"
+    class="icon"
+  />
 </template>
+
+<script lang="ts" setup>
+import { icons } from 'eurus-icons-vue/global'
+</script>
+
+<style>
+.icon {
+  height: 48px;
+  color: #409eff;
+}
+</style>
