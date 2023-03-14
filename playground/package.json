@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "eurus-icons--svg": "workspace:*",
+    "eurus-icons-svg": "workspace:*",
     "eurus-icons-vue": "workspace:*",
     "vue": "^3.2.47"
   },
