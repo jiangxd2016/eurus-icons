@@ -46,7 +46,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run build:generate && run-p build:build build:types",
+    "build": "pnpm run build:generate && pnpm run build:build && pnpm run build:types",
     "build:generate": "tsx build/generate.ts",
     "build:build": "tsx build/build.ts",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly"
@@ -55,23 +55,22 @@
     "vue": "^3.2.0"
   },
   "devDependencies": {
-    "eurus-icons-svg": "workspace:*",
     "@pnpm/find-workspace-dir": "^5.0.1",
-    "@pnpm/find-workspace-packages": "^5.0.37",
+    "@pnpm/find-workspace-packages": "^5.0.40",
     "@pnpm/logger": "^5.0.0",
     "@types/fs-extra": "^11.0.1",
-    "@types/node": "^18.14.6",
+    "@types/node": "^18.15.3",
     "@types/prettier": "^2.7.2",
     "camelcase": "^7.0.1",
     "chalk": "^5.2.0",
     "consola": "^2.15.3",
     "esbuild": "^0.17.11",
-    "esbuild-plugin-globals": "^0.1.1",
+    "esbuild-plugin-globals": "^0.2.0",
+    "eurus-icons-svg": "workspace:*",
     "fast-glob": "^3.2.12",
     "fs-extra": "^11.1.0",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.8.4",
-    "tsx": "^3.12.3",
+    "tsx": "^3.12.5",
     "typescript": "^4.9.5",
     "unplugin-vue": "^4.0.2",
     "vue": "^3.2.47",
